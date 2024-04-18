@@ -1,16 +1,11 @@
 import express from "express";
-import { mostrarBici } from "../controller/controller.js";
+import { mostrarBici, home } from "../controller/controller.js";
 const router = express.Router();
 
-//ruta principal
-router.get("/", (req, res) => {
-  res.send('holamunod');
-});
 
-//ruta bici
+router.get("/", home);
+
 router.get("/bicicletas", mostrarBici)
-
-
 
 
 //creamos nuestra ruta generica, simeprea al final
